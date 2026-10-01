@@ -1,0 +1,115 @@
+Create the **Project View Detail page** for my UX/UI portfolio.
+
+The detail page should be different depending on whether the project is a **Mobile App** or **Web Project**.
+
+## Mobile App Project Detail
+
+Start with a clean project header containing:
+
+* Project name
+* Short project description
+* My role
+* Tools used
+* Platform: Mobile App
+
+Then include an **"Exploring UI Screens"** section.
+
+### Exploring UI Screens
+
+* Showcase **10 mobile UI screens** inside realistic phone mockups.
+* The screens should be displayed as a large visual carousel.
+* Automatically slide between the 10 screens every few seconds.
+* Include pagination dots to show the current screen.
+* Allow users to manually navigate using arrows or swipe.
+* Use smooth, subtle transitions.
+* Keep the phone UI large and visually dominant.
+* Each screen can have a short label/title below or beside it to explain what the screen represents.
+* The section should feel like an interactive walkthrough of the app rather than a traditional image gallery.
+
+Example:
+
+**Exploring UI Screens**
+
+`[ Large Phone Mockup ]`
+
+`Home → Timetable → Grades → Homework → Profile → Attendance → ...`
+
+After the screen showcase, include a short **Project Overview** section explaining:
+
+* What the product is
+* The problem or purpose
+* My role in the project
+* What I contributed to the UX/UI
+
+Then add the relevant external CTA:
+
+**View on Google Play**
+or
+**View Case Study on Behance**
+
+The CTA should be prominent but not overpower the project.
+
+---
+
+## Web Project Detail
+
+For web projects, do **not** use the "Exploring UI Screens" mobile carousel.
+
+Start with:
+
+* Project name
+* Short project description
+* My role
+* Tools used
+* Platform: Web
+
+Then showcase the website using **large desktop/browser mockups**.
+
+### Website Showcase
+
+* Use large, high-quality screenshots of the website.
+* Show the main homepage/important pages prominently.
+* Allow the screenshots to be viewed clearly while scrolling.
+* Use subtle scroll-reveal animations.
+* Avoid unnecessary automatic sliders.
+* Make the website design itself the main visual focus.
+
+Then include:
+
+### Project Overview
+
+Briefly explain:
+
+* What the website is
+* What I worked on
+* UX/UI improvements
+* Key design decisions
+
+For SpeakNews, include a clear CTA:
+
+**Visit Website**
+
+The button should open the live SpeakNews website in a new tab.
+
+---
+
+## Overall Detail Page Style
+
+Keep the project detail pages:
+
+* Clean
+* Spacious
+* Visual-first
+* Professional
+* Modern
+* Minimal text
+* Strong typography
+* Smooth but subtle animations
+
+Do not force the mobile and web projects into the same layout.
+
+**Mobile = Exploring UI Screens + 10-screen interactive phone carousel**
+
+**Web = Large website showcase + project explanation**
+
+The purpose of the detail page is to let visitors quickly understand the project and see the actual UX/UI work.
