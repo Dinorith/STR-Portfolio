@@ -1,0 +1,1414 @@
+Build a complete premium UI/UX designer portfolio website for "Sothearith".
+
+Use the attached reference image as inspiration for the overall portfolio content and hierarchy, but DO NOT copy the reference design directly.
+
+The final website should be an ORIGINAL, highly art-directed portfolio with a strong BRUTALIST / NEO-BRUTALIST visual identity.
+
+The website should feel like:
+
+BRUTALIST WEB DESIGN
++
+EDITORIAL DESIGN
++
+EXPERIMENTAL DIGITAL ART
++
+3D INTERACTIVE DESIGN
++
+PREMIUM UI/UX PORTFOLIO
+
+It should feel like a designer's personal website, not a generic AI-generated portfolio template.
+
+==================================================
+TECH STACK
+==================================================
+
+Use:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- React Three Fiber / Three.js for 3D
+- Framer Motion for UI animations
+- Lucide React for icons
+
+Use reusable components.
+
+Create clean component architecture.
+
+Components should include:
+
+Navbar
+Hero
+Marquee
+ProjectIndex
+ProjectShowcase
+About
+Philosophy
+Process
+Skills
+FAQ
+Contact
+Footer
+ThreeDHeroObject
+ProjectCaseStudy
+
+Use semantic HTML.
+
+Make the site accessible.
+
+Optimize for performance.
+
+==================================================
+OVERALL DESIGN DIRECTION
+==================================================
+
+The website MUST be BRUTALIST.
+
+Do NOT make it look like:
+
+- SaaS
+- Glassmorphism
+- Soft minimalist portfolio
+- Corporate website
+- Apple-style website
+- Generic startup landing page
+- Rounded card UI
+- Pastel portfolio
+- Dribbble template
+
+Instead use:
+
+- Hard rectangular shapes
+- Thick borders
+- Black outlines
+- Hard offset shadows
+- Oversized typography
+- Monospace labels
+- Strong contrast
+- Asymmetrical layouts
+- Editorial composition
+- Visible grid structure
+- Large numbers
+- Technical labels
+- Underlines
+- Marquee text
+- Overlapping elements
+- Unexpected positioning
+- Graphic color blocks
+- Raw UI elements
+- Intentional imperfections
+
+The website should feel slightly unconventional while remaining highly usable.
+
+==================================================
+COLOR SYSTEM
+==================================================
+
+Primary background:
+
+#F5F5F0
+
+Primary text:
+
+#111111
+
+Pure black:
+
+#000000
+
+White:
+
+#FFFFFF
+
+Primary accent:
+
+#0057FF
+
+Secondary accent:
+
+#B6FF00
+
+Optional warning accent:
+
+#FF3B30
+
+Use black and off-white for most of the interface.
+
+Use electric blue and acid green strategically.
+
+Do not use soft pastel gradients.
+
+Do not use glassmorphism.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Use:
+
+Primary font:
+Inter / Helvetica Neue / Arial / Geist
+
+Secondary font:
+IBM Plex Mono / JetBrains Mono / Space Mono
+
+Use very bold typography for major headings.
+
+Use monospace for metadata and technical labels.
+
+Headings should sometimes be extremely large.
+
+Desktop hero typography can reach:
+
+100–160px
+
+depending on viewport size.
+
+Use tight letter spacing for large headings.
+
+Use uppercase labels.
+
+==================================================
+GRID
+==================================================
+
+Use a 12-column editorial grid on desktop.
+
+Maximum content width:
+
+1400px
+
+Desktop side padding:
+
+32–48px
+
+Tablet:
+
+24–32px
+
+Mobile:
+
+16–20px
+
+Do not make every section perfectly symmetrical.
+
+Allow selected elements to intentionally break the grid.
+
+==================================================
+NAVIGATION
+==================================================
+
+Create a brutalist navigation bar.
+
+Do NOT make it a floating rounded pill.
+
+Use a rectangular layout with visible borders.
+
+Example:
+
+----------------------------------------------------
+| SR™ | ABOUT | WORK | PROCESS | CONTACT | START → |
+----------------------------------------------------
+
+Style:
+
+Background:
+#F5F5F0
+
+Border:
+2px solid #000
+
+Border radius:
+0
+
+Text:
+uppercase
+
+Font:
+small bold sans-serif / monospace
+
+Right side:
+
+[ START A PROJECT → ]
+
+Black background.
+
+White text.
+
+The navigation should remain sticky.
+
+When scrolling, maintain the strong border.
+
+On mobile:
+
+------------------------------------------------
+| SR™                              MENU +     |
+------------------------------------------------
+
+Open a full-screen brutalist menu.
+
+==================================================
+HERO SECTION
+==================================================
+
+This is the most important section.
+
+The first screen should immediately feel memorable.
+
+Create a large asymmetric hero using the 12-column grid.
+
+LEFT SIDE:
+
+Small technical label:
+
+[01 / INTRODUCTION]
+
+Then:
+
+● AVAILABLE FOR SELECTED PROJECTS — 2026
+
+Use a small green dot.
+
+Then huge headline:
+
+HEY,
+I'M
+SOTHEARITH.
+
+Underneath:
+
+I DESIGN
+DIGITAL
+EXPERIENCES.
+
+Use extremely large typography.
+
+Example:
+
+HEY, I'M
+SOTHEARITH.
+
+I DESIGN
+DIGITAL
+EXPERIENCES.
+
+The first statement should be black.
+
+The second statement should be dark gray.
+
+Highlight one word with electric blue.
+
+For example:
+
+DIGITAL
+
+can be electric blue.
+
+Below:
+
+UI/UX DESIGNER
+PRODUCT DESIGNER
+CREATIVE THINKER
+
+Then description:
+
+"I create thoughtful digital experiences that turn complex ideas into simple, useful products."
+
+Buttons:
+
+[ VIEW MY WORK ↗ ]
+
+[ LET'S WORK → ]
+
+Buttons must be rectangular.
+
+No pill buttons.
+
+Use thick black borders.
+
+Primary button:
+
+black background
+white text
+
+Secondary:
+
+white background
+black border
+
+Add:
+
+SCROLL TO EXPLORE ↓
+
+near the bottom.
+
+==================================================
+3D HERO OBJECT
+==================================================
+
+On the RIGHT side of the hero create a large interactive 3D object.
+
+This is the hero's visual signature.
+
+Use React Three Fiber / Three.js.
+
+The object should look like an experimental digital sculpture.
+
+Preferred form:
+
+A distorted chrome geometric sculpture.
+
+Possible forms:
+
+- Twisted cube
+- Irregular torus
+- Liquid-metal shape
+- Abstract polyhedron
+- Deformed sphere
+- Geometric sculpture
+
+Choose ONE coherent object.
+
+Do not create multiple random 3D objects.
+
+The object should look premium and artistic.
+
+Material:
+
+Dark chrome / metallic black.
+
+Properties:
+
+Metalness:
+high
+
+Roughness:
+low-medium
+
+Add subtle reflections.
+
+Lighting:
+
+Large soft key light.
+
+Blue rim light.
+
+Small white fill light.
+
+Very subtle ambient light.
+
+Background remains off-white.
+
+The object should have:
+
+- Realistic reflections
+- Subtle blue highlights
+- Soft ambient shadow
+- Slight floating motion
+- Subtle grain if performance allows
+
+The object should be large enough to dominate the right side of the hero.
+
+It can slightly extend outside the grid.
+
+==================================================
+3D INTERACTION
+==================================================
+
+The 3D object should respond to mouse movement.
+
+When the user moves the mouse:
+
+Object rotates slightly toward the cursor.
+
+Keep movement subtle.
+
+Do not make it spin continuously.
+
+Add gentle floating movement.
+
+If the user drags the object:
+
+Allow manual rotation.
+
+Add inertia.
+
+When the user stops dragging:
+
+Slowly return to idle movement.
+
+Add a tiny technical label near the object:
+
+OBJECT / 001
+
+DIGITAL ARTIFACT
+
+MATERIAL / CHROME
+
+ROTATION / 032°
+
+These should use monospace typography.
+
+Add a small:
+
+[ DRAG TO EXPLORE ]
+
+label.
+
+On mobile:
+
+Disable drag interaction.
+
+Use a gentle idle rotation.
+
+If WebGL is unavailable:
+
+Show a static high-quality fallback image.
+
+==================================================
+HERO DECORATION
+==================================================
+
+Add subtle brutalist details around the hero.
+
+Examples:
+
+11°33'N
+104°55'E
+
+CAMBODIA → WORLDWIDE
+
+SYSTEM:
+DESIGN / RESEARCH / PROTOTYPE
+
+STATUS:
+AVAILABLE
+
+Do not clutter the hero.
+
+Use these as small annotations.
+
+==================================================
+HERO SCROLL TRANSITION
+==================================================
+
+As the user scrolls down:
+
+The 3D object should slowly move downward and scale slightly smaller.
+
+The hero typography can move upward very slightly.
+
+The next section should gradually enter.
+
+Keep this subtle.
+
+Do not create aggressive parallax.
+
+==================================================
+LOADING EXPERIENCE
+==================================================
+
+On initial load show a very short brutalist loading screen.
+
+Example:
+
+SOTHEARITH™
+
+INITIALIZING EXPERIENCE...
+
+[████████░░] 80%
+
+Then reveal the website.
+
+Duration:
+
+300–700ms.
+
+Never make the user wait.
+
+==================================================
+MARQUEE SECTION
+==================================================
+
+Immediately below the hero.
+
+Create a full-width brutalist marquee.
+
+Black background.
+
+White text.
+
+Text:
+
+UI/UX DESIGN — PRODUCT DESIGN — DIGITAL EXPERIENCES — INTERACTION — UI/UX DESIGN — PRODUCT DESIGN —
+
+Large typography.
+
+Continuous horizontal animation.
+
+Then create another smaller reverse-direction marquee later in the page.
+
+Keep animation smooth.
+
+==================================================
+PROJECTS SECTION
+==================================================
+
+Section label:
+
+02 / SELECTED WORK
+
+Large heading:
+
+PROJECTS
+I'VE
+BUILT.
+
+Description:
+
+"A selection of interfaces, products, and digital experiences."
+
+Do NOT create ordinary equal-sized portfolio cards.
+
+Use an asymmetrical editorial layout.
+
+==================================================
+PROJECT 01 — FEATURED
+==================================================
+
+Project:
+
+NIVA PREMIUM APP
+
+Category:
+
+MOBILE PRODUCT DESIGN / 2026
+
+Make this the largest project.
+
+Use a huge brutalist composition.
+
+Create a realistic 3D smartphone mockup.
+
+The phone should:
+
+- Have actual UI displayed
+- Have realistic depth
+- Slightly rotate
+- Cast a hard subtle shadow
+- Float above the background
+- Have a premium material
+
+Place multiple screens around the main phone if useful.
+
+Use a large project number:
+
+01
+
+behind the device.
+
+Add:
+
+NIVA
+PREMIUM APP
+
+MOBILE PRODUCT DESIGN
+
+UX RESEARCH
+UI DESIGN
+PROTOTYPING
+
+Button:
+
+[ VIEW CASE STUDY → ]
+
+Project container:
+
+3px black border.
+
+Hard offset shadow:
+
+10px 10px 0 #000.
+
+No rounded corners.
+
+==================================================
+PROJECT HOVER
+==================================================
+
+When hovering Project 01:
+
+Phone moves slightly toward the cursor.
+
+Phone rotates subtly.
+
+Image scale:
+
+1.03
+
+Project background changes:
+
+#F5F5F0 → #E8F0FF
+
+Title shifts 4px.
+
+Arrow moves right.
+
+Cursor becomes:
+
+VIEW →
+
+==================================================
+PROJECT 02
+==================================================
+
+STUDENT APP
+
+Category:
+
+MOBILE APP / 2026
+
+Create a composition with three floating smartphone screens.
+
+Main screen faces the viewer.
+
+Other screens rotate slightly behind it.
+
+Add giant:
+
+02
+
+in the background.
+
+Use black and acid green.
+
+Add:
+
+STUDENT APP
+
+MOBILE UX
+
+[ VIEW PROJECT → ]
+
+Use hard borders and hard shadows.
+
+==================================================
+PROJECT 03
+==================================================
+
+MOBILE DESIGN SYSTEM
+
+Category:
+
+DESIGN SYSTEM / 2026
+
+Create a large visual board.
+
+Show:
+
+Buttons
+Cards
+Inputs
+Typography
+Colors
+Icons
+Navigation
+Components
+
+Arrange them like a physical design board.
+
+Use black / white / blue / acid green.
+
+Add:
+
+03
+
+in the background.
+
+==================================================
+PROJECT 04
+==================================================
+
+CREATIVE WEBSITE
+
+Category:
+
+WEB DESIGN / 2026
+
+Show a large website mockup.
+
+Use an editorial composition.
+
+Allow some typography to overlap the mockup.
+
+Add:
+
+04
+
+large in the background.
+
+==================================================
+PROJECT INDEX
+==================================================
+
+Add a sticky project index.
+
+Example:
+
+01 NIVA
+02 STUDENT
+03 SYSTEM
+04 WEBSITE
+
+Active project gets:
+
+●
+
+Inactive:
+
+○
+
+Clicking a project smoothly scrolls to it.
+
+==================================================
+CASE STUDY EXPERIENCE
+==================================================
+
+Clicking:
+
+VIEW CASE STUDY →
+
+must open a dedicated case study page.
+
+Do not use a generic modal.
+
+Each project should have its own route.
+
+Example:
+
+/work/niva-premium-app
+
+Case study structure:
+
+01
+NIVA PREMIUM APP
+
+Large hero visual.
+
+Then:
+
+THE PROBLEM
+
+Explain the problem.
+
+THE GOAL
+
+Explain project objectives.
+
+RESEARCH
+
+Show research notes.
+
+WIREFRAMES
+
+Show wireframes.
+
+VISUAL SYSTEM
+
+Show typography and colors.
+
+FINAL DESIGN
+
+Show large polished UI screens.
+
+PROTOTYPE
+
+Show interactive prototype preview.
+
+RESULT
+
+Show outcome.
+
+Use brutalist typography.
+
+Use large numbers.
+
+Use thick borders.
+
+Use horizontal lines.
+
+Add:
+
+← BACK TO WORK
+
+==================================================
+ABOUT SECTION
+==================================================
+
+03 / ABOUT
+
+Heading:
+
+I LIKE
+MAKING
+COMPLICATED
+THINGS
+SIMPLE.
+
+Description:
+
+"I'm Sothearith, a UI/UX designer focused on creating digital products that are clear, useful, and intentional."
+
+Add a portrait area.
+
+If a real image is not provided:
+
+DO NOT generate a fake person.
+
+Instead use an abstract graphic / typographic portrait placeholder.
+
+Example:
+
+[ PORTRAIT
+COMING
+SOON ]
+
+Add technical labels:
+
+NAME
+SOTHEARITH
+
+ROLE
+UI/UX DESIGNER
+
+LOCATION
+CAMBODIA
+
+STATUS
+AVAILABLE
+
+==================================================
+DESIGN PHILOSOPHY
+==================================================
+
+Create three large brutalist blocks.
+
+01
+
+CLARITY
+
+"Make the next step obvious."
+
+02
+
+FUNCTION
+
+"Design should solve a real problem."
+
+03
+
+DETAIL
+
+"Small decisions create meaningful experiences."
+
+Use:
+
+Block 1:
+White
+
+Block 2:
+Black
+
+Block 3:
+Electric blue
+
+Use giant typography.
+
+No rounded cards.
+
+==================================================
+PROCESS
+==================================================
+
+04 / PROCESS
+
+Heading:
+
+HOW
+I WORK.
+
+Create a vertical brutalist timeline.
+
+01 DISCOVER
+02 RESEARCH
+03 DEFINE
+04 DESIGN
+05 PROTOTYPE
+06 TEST
+
+Each item:
+
+Large number
+Large title
+Short description
+
+Use a thick vertical line.
+
+Allow numbers to overlap the line.
+
+On hover:
+
+Highlight the active process in electric blue.
+
+==================================================
+TOOLS / SKILLS
+==================================================
+
+05 / TOOLBOX
+
+Heading:
+
+TOOLS
+I USE.
+
+Create large rectangular tags.
+
+FIGMA
+FRAMER
+WEBFLOW
+FIGJAM
+NOTION
+PHOTOSHOP
+ILLUSTRATOR
+
+Each tag:
+
+2px black border.
+
+No rounded corners.
+
+On hover:
+
+Black background.
+
+White text.
+
+Translate:
+
+-3px -3px
+
+Hard shadow appears.
+
+Also list skills:
+
+UX RESEARCH
+WIREFRAMING
+PROTOTYPING
+DESIGN SYSTEMS
+INTERACTION DESIGN
+RESPONSIVE DESIGN
+
+==================================================
+FAQ
+==================================================
+
+06 / QUESTIONS
+
+Heading:
+
+YOU ASKED.
+I ANSWERED.
+
+Create a brutalist accordion.
+
+Each question:
+
+2px black border.
+
+Square corners.
+
+Questions:
+
+WHAT TOOLS DO YOU USE?
+
+HOW LONG DOES A PROJECT TAKE?
+
+DO YOU WORK WITH DEVELOPERS?
+
+CAN I HIRE YOU?
+
+WHAT DO YOU NEED TO START?
+
+When opened:
+
+Background:
+Electric blue
+
+Text:
+Black
+
+Plus icon rotates.
+
+Use smooth 250ms animation.
+
+==================================================
+CONTACT
+==================================================
+
+Make the final contact section extremely bold.
+
+Full-width black background.
+
+White typography.
+
+Large heading:
+
+LET'S
+MAKE
+SOMETHING
+GOOD.
+
+Description:
+
+"Have a project, product, or idea in mind?"
+
+Large acid green button:
+
+[ START A PROJECT ↗ ]
+
+Below:
+
+EMAIL
+hello@example.com
+
+LOCATION
+CAMBODIA
+
+SOCIALS
+BEHANCE
+DRIBBBLE
+LINKEDIN
+INSTAGRAM
+
+Use huge typography.
+
+==================================================
+FOOTER
+==================================================
+
+Brutalist footer.
+
+Top:
+
+SR™
+
+UI/UX DESIGNER
+PRODUCT DESIGNER
+
+CAMBODIA → WORLDWIDE
+
+Social links.
+
+Bottom:
+
+© 2026 SOTHEARITH
+
+BUILT WITH INTENTION.
+
+Use visible borders.
+
+==================================================
+CUSTOM CURSOR
+==================================================
+
+Desktop only.
+
+Default cursor:
+
+small black square.
+
+Hovering link:
+
+small blue circle.
+
+Hovering project:
+
+large circle:
+
+VIEW →
+
+Hovering 3D object:
+
+large circle:
+
+DRAG
+
+Disable custom cursor on mobile/touch devices.
+
+==================================================
+MICRO INTERACTIONS
+==================================================
+
+Buttons:
+
+Hard shadow.
+
+On hover:
+Move -3px.
+
+On click:
+Move back toward original position.
+
+Project cards:
+
+Move -4px.
+
+Shadow increases.
+
+Links:
+
+Animated underline.
+
+Images:
+
+Subtle scale.
+
+Marquee:
+
+Continuous movement.
+
+Sections:
+
+Subtle reveal on scroll.
+
+Use Framer Motion.
+
+Animation duration:
+
+250–700ms.
+
+Do not use excessive animation.
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+Desktop:
+
+12-column grid.
+
+Large hero typography.
+
+Large 3D object.
+
+Asymmetric project compositions.
+
+Tablet:
+
+8-column grid.
+
+Reduce typography.
+
+Keep 3D object.
+
+Mobile:
+
+4-column grid.
+
+Side padding:
+
+16–20px.
+
+Hero becomes vertical.
+
+Typography:
+
+48–70px.
+
+3D object moves below the hero heading.
+
+Disable mouse tracking.
+
+Projects become single-column.
+
+Keep hard borders.
+
+Keep brutalist style.
+
+Navigation becomes:
+
+SR™
+MENU +
+
+Menu opens full-screen.
+
+No horizontal page scrolling.
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+Use semantic HTML.
+
+Ensure sufficient color contrast.
+
+Buttons must have accessible labels.
+
+Images require alt text.
+
+Respect:
+
+prefers-reduced-motion.
+
+If reduced motion is enabled:
+
+Disable:
+- 3D movement
+- parallax
+- marquee animation
+- excessive transitions
+
+==================================================
+PERFORMANCE
+==================================================
+
+The 3D hero must not make the website slow.
+
+Use:
+
+React Three Fiber.
+
+Optimize geometry.
+
+Use compressed textures.
+
+Lazy-load 3D where possible.
+
+Do not load unnecessary libraries.
+
+Use a static fallback if WebGL is unavailable.
+
+Lazy-load project images.
+
+Optimize images.
+
+The website should feel extremely fast.
+
+==================================================
+CONTENT
+==================================================
+
+Name:
+
+Sothearith
+
+Role:
+
+UI/UX Designer
+Product Designer
+
+Location:
+
+Cambodia
+
+Availability:
+
+Available for selected projects
+
+Hero:
+
+"Hey, I'm Sothearith.
+I design digital experiences."
+
+Description:
+
+"I create thoughtful digital experiences that turn complex ideas into simple, useful products."
+
+Projects:
+
+NIVA Premium App
+Student App
+Mobile Design System
+Creative Website
+
+Process:
+
+Discover
+Research
+Define
+Design
+Prototype
+Test
+
+==================================================
+IMPORTANT DESIGN RULES
+==================================================
+
+1. Keep the brutalist identity consistent throughout the entire website.
+
+2. Do NOT turn the website into a generic minimalist portfolio.
+
+3. Do NOT use pill-shaped UI everywhere.
+
+4. Do NOT use excessive rounded cards.
+
+5. Do NOT use soft gradients.
+
+6. Do NOT use glassmorphism.
+
+7. Do NOT use pastel colors.
+
+8. Use hard borders.
+
+9. Use hard shadows.
+
+10. Use oversized typography.
+
+11. Use asymmetrical layouts.
+
+12. Make the 3D hero object the visual signature.
+
+13. The 3D object must support the typography, not overpower it.
+
+14. Projects should feel like curated case studies, not generic cards.
+
+15. Use animation sparingly.
+
+16. Prioritize typography, composition, interaction, and visual hierarchy.
+
+17. Every section should feel intentionally designed.
+
+18. Avoid adding random decorative elements just because they are "brutalist."
+
+19. Keep the website professional enough that a real client could hire the designer.
+
+20. The first 3 seconds of the website should communicate:
+
+"I am looking at a designer with a strong visual identity."
+
+==================================================
+FINAL RESULT
+==================================================
+
+The final website should feel like a combination of:
+
+BRUTALIST DESIGN
++
+EDITORIAL GRAPHIC DESIGN
++
+EXPERIMENTAL 3D ART
++
+UI/UX PORTFOLIO
++
+INTERACTIVE DIGITAL EXPERIENCE
+
+The hero should be unforgettable.
+
+The 3D sculpture should become part of Sothearith's visual identity.
+
+The project section should make visitors want to explore the case studies.
+
+The website should feel custom-made, artistic, bold, and highly intentional.
+
+Do not make it look like an AI-generated template.

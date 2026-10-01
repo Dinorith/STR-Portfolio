@@ -1,0 +1,1 @@
+- [Portfolio case-study claims](portfolio-case-study-claims.md) — The four named projects are concept explorations; don't invent clients, research findings, or impact metrics.
