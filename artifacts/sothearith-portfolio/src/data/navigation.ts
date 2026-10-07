@@ -13,5 +13,5 @@ export const navItems: NavItem[] = [
 
 export const navCta = {
   label: 'START A PROJECT',
-  href: 'mailto:hello@example.com',
+  href: 'https://t.me/sothearith1',
 };

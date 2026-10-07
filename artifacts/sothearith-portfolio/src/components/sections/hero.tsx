@@ -157,7 +157,12 @@ export default function Hero() {
           <a className="btn btn-dark" href="#work">
             VIEW MY WORK <ArrowUpRight size={15} />
           </a>
-          <a className="btn btn-light" href={`mailto:${siteConfig.email}`}>
+          <a
+            className="btn btn-light"
+            href={siteConfig.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LET'S WORK <ArrowRight size={15} />
           </a>
         </div>
@@ -168,8 +173,6 @@ export default function Hero() {
       <div className="hero-bottom">
         <span className="mono">
           {siteConfig.coordinates}
-          <br />
-          {siteConfig.region}
         </span>
         <a className="mono scroll-hint" href="#work">
           SCROLL TO EXPLORE <ArrowDown size={13} />

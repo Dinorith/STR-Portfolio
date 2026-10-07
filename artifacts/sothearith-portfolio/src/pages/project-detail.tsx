@@ -8,7 +8,6 @@ import {
   ExternalLink,
   Smartphone,
   Globe,
-  CheckCircle,
 } from 'lucide-react';
 import { projectsList } from '@/data/projects-data';
 import MobileScreensCarousel from '@/components/mobile-screens-carousel';
@@ -35,6 +34,7 @@ export default function ProjectDetailPage() {
   const currentIndex = projectsList.findIndex((p) => p.slug === project.slug);
   const nextProject = projectsList[(currentIndex + 1) % projectsList.length];
   const isMobile = project.platform === 'Mobile App';
+  const isMixed = !!(project.mobileScreens?.length && project.webShowcase?.length);
 
   return (
     <div className="project-detail-page">
@@ -109,8 +109,14 @@ export default function ProjectDetailPage() {
             <div className="spec-cell">
               <span className="spec-label mono">PLATFORM</span>
               <strong className="spec-val platform-highlight">
-                {isMobile ? <Smartphone size={14} className="inline-icon" /> : <Globe size={14} className="inline-icon" />}
-                {project.platform}
+                {isMixed ? (
+                  <><Smartphone size={14} className="inline-icon" /> + <Globe size={14} className="inline-icon" /></>
+                ) : isMobile ? (
+                  <Smartphone size={14} className="inline-icon" />
+                ) : (
+                  <Globe size={14} className="inline-icon" />
+                )}
+                {isMixed ? 'Mobile App + Web System' : project.platform}
               </strong>
             </div>
 
@@ -122,25 +128,29 @@ export default function ProjectDetailPage() {
         </header>
 
         {/* =================================================================
-            2. BODY CONTENT: MOBILE APP vs WEB PROJECT
+            2. BODY CONTENT: Mobile Screens + optional Web Showcase
            ================================================================= */}
-        {isMobile ? (
-          /* MOBILE APP LAYOUT: Exploring UI Screens + 10-Screen Phone Carousel */
-          project.mobileScreens && (
-            <MobileScreensCarousel
-              screens={project.mobileScreens}
-              projectSlug={project.slug}
-            />
-          )
-        ) : (
-          /* WEB PROJECT LAYOUT: Large Desktop / Browser Mockup Showcase */
+
+        {/* Mobile Screens — shown when project has mobile screens */}
+        {project.mobileScreens && project.mobileScreens.length > 0 && (
+          <MobileScreensCarousel
+            screens={project.mobileScreens}
+            projectSlug={project.slug}
+          />
+        )}
+
+        {/* Web Showcase — shown for pure web projects OR mixed projects */}
+        {project.webShowcase && project.webShowcase.length > 0 && (
           <section className="web-showcase-section" aria-label="Website Showcase">
             <div className="section-head-row">
               <div>
                 <span className="mono section-sub-tag">
-                  <span className="live-indicator-dot" /> DESKTOP CANVASES & ARCHITECTURE
+                  <span className="live-indicator-dot" />
+                  {isMixed ? ' WEB SYSTEM CANVASES' : ' DESKTOP CANVASES & ARCHITECTURE'}
                 </span>
-                <h3 className="section-main-title">WEBSITE SHOWCASE</h3>
+                <h3 className="section-main-title">
+                  {isMixed ? 'WEB SYSTEM SHOWCASE' : 'WEBSITE SHOWCASE'}
+                </h3>
               </div>
               <div className="mono web-scroll-hint">
                 SCROLL TO EXPLORE ARCHITECTURE ↓
@@ -148,7 +158,7 @@ export default function ProjectDetailPage() {
             </div>
 
             <div className="web-mockups-stack">
-              {project.webShowcase?.map((section, idx) => (
+              {project.webShowcase.map((section, idx) => (
                 <WebBrowserMockup
                   key={section.id}
                   section={section}
@@ -173,7 +183,7 @@ export default function ProjectDetailPage() {
             <div className="overview-primary-col">
               <div className="overview-block">
                 <span className="block-tag mono">WHAT THE {isMobile ? 'PRODUCT' : 'WEBSITE'} IS</span>
-                <h3 className="block-title">Transforming fragmented workflows into deliberate clarity.</h3>
+                <h3 className="block-title">{project.overview.headline || 'Transforming fragmented workflows into deliberate clarity.'}</h3>
                 <p className="block-text">{project.overview.whatItIs}</p>
               </div>
 
@@ -192,30 +202,27 @@ export default function ProjectDetailPage() {
                 <p className="block-text role-statement">{project.overview.myRole}</p>
               </div>
 
-              <div className="overview-block">
-                <span className="block-tag mono">
-                  {isMobile ? 'WHAT I CONTRIBUTED TO THE UX/UI' : 'UX/UI IMPROVEMENTS'}
-                </span>
-                <ul className="contributions-list">
-                  {project.overview.contributionsOrImprovements.map((item, i) => (
-                    <li key={i}>
-                      <CheckCircle size={16} className="check-bullet" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               {project.overview.keyDecisions && (
                 <div className="overview-block">
                   <span className="block-tag mono">KEY DESIGN DECISIONS</span>
                   <ul className="contributions-list decisions">
-                    {project.overview.keyDecisions.map((dec, i) => (
-                      <li key={i}>
-                        <span className="mono dec-num">0{i + 1}</span>
-                        <span>{dec}</span>
-                      </li>
-                    ))}
+                    {project.overview.keyDecisions.map((dec, i) => {
+                      const cleanDec = dec.replace(/^\d{1,2}\s*([—–\-.]|\s)\s*/, '');
+                      const parts = cleanDec.split(' — ');
+                      const hasSplit = parts.length > 1;
+                      const title = hasSplit ? parts[0] : '';
+                      const body = hasSplit ? parts.slice(1).join(' — ') : cleanDec;
+
+                      return (
+                        <li key={i}>
+                          <span className="mono dec-num">0{i + 1}</span>
+                          <div>
+                            {title && <strong className="dec-title">{title}</strong>}
+                            <p className="dec-text">{body}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               )}
@@ -242,6 +249,48 @@ export default function ProjectDetailPage() {
                   data-testid="button-visit-website"
                 >
                   <span>VISIT WEBSITE</span>
+                  <ArrowUpRight size={17} />
+                </a>
+              )}
+
+              {/* For Project Link */}
+              {project.externalLinks.projectLink && (
+                <a
+                  href={project.externalLinks.projectLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-cta btn-cta-primary"
+                  data-testid="button-project-link"
+                >
+                  <span>VIEW PROJECT</span>
+                  <ArrowUpRight size={17} />
+                </a>
+              )}
+
+              {/* For GitHub Repository */}
+              {project.externalLinks.github && (
+                <a
+                  href={project.externalLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-cta btn-cta-primary"
+                  data-testid="button-github"
+                >
+                  <span>VIEW ON GITHUB</span>
+                  <ArrowUpRight size={17} />
+                </a>
+              )}
+
+              {/* For Figma Prototype / File */}
+              {project.externalLinks.figma && (
+                <a
+                  href={project.externalLinks.figma}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-cta btn-cta-primary"
+                  data-testid="button-figma"
+                >
+                  <span>VIEW ON FIGMA</span>
                   <ArrowUpRight size={17} />
                 </a>
               )}

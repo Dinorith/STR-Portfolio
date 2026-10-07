@@ -67,7 +67,7 @@ export default function MobileScreensCarousel({ screens, projectSlug }: MobileSc
       <div className="section-head-row">
         <div>
           <span className="mono section-sub-tag">
-            <span className="live-indicator-dot" /> INTERACTIVE WALKTHROUGH · 10 SCREENS
+            <span className="live-indicator-dot" /> INTERACTIVE WALKTHROUGH · {total} SCREENS
           </span>
           <h3 className="section-main-title">EXPLORING UI SCREENS</h3>
         </div>
@@ -140,7 +140,10 @@ export default function MobileScreensCarousel({ screens, projectSlug }: MobileSc
               transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
               className="phone-motion-box"
             >
-              <MobilePhoneMockup screen={currentScreen} projectSlug={projectSlug} />
+              <MobilePhoneMockup
+                screen={currentScreen}
+                projectSlug={projectSlug}
+              />
             </motion.div>
           </AnimatePresence>
         </div>

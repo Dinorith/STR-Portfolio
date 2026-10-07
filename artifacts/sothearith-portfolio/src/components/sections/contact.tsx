@@ -22,7 +22,9 @@ export default function Contact() {
             </p>
             <a
               className="btn contact-btn"
-              href={`mailto:${siteConfig.email}?subject=Let%E2%80%99s%20make%20something%20good`}
+              href={siteConfig.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               START A PROJECT <ArrowUpRight size={17} />
             </a>
@@ -31,9 +33,11 @@ export default function Contact() {
 
         <div className="contact-meta">
           <div>
-            <span className="mono">EMAIL</span>
+            <span className="mono">TELEGRAM</span>
             <p>
-              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+              <a href={siteConfig.telegram} target="_blank" rel="noopener noreferrer">
+                {siteConfig.telegramUsername}
+              </a>
             </p>
           </div>
           <div>

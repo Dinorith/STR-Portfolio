@@ -513,6 +513,35 @@
   flex-direction: column;
 }
 
+.phone-glass-screen.has-custom-screen-image {
+  background: #000;
+}
+
+.phone-app-viewport.has-custom-image {
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  height: 100%;
+}
+
+.phone-uploaded-image-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  overflow: hidden;
+}
+
+.phone-custom-screen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
 /* Home Indicator */
 .phone-home-indicator {
   height: 22px;
@@ -2471,82 +2500,80 @@
   margin: 0;
 }
 
-/* Realistic Desktop Browser Frame */
-.desktop-browser-frame {
+/* ── Redesigned Screen Card Frame ───────────────────────────────────────── */
+
+.screen-card-frame {
   width: 100%;
-  border: 3px solid var(--ink);
-  box-shadow: 12px 12px 0 var(--ink);
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
-  background: #fff;
+  background: #0a0a0a;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.07),
+    0 32px 80px -16px rgba(0,0,0,0.55),
+    0 8px 24px -4px rgba(0,0,0,0.35);
+  transform-origin: bottom center;
 }
 
-.browser-chrome {
-  background: #e5e5dd;
-  border-bottom: 2px solid var(--ink);
-  padding: 10px 16px;
-  display: grid;
-  grid-template-columns: auto auto 1fr auto;
-  align-items: center;
-  gap: 16px;
-}
-
-.browser-controls {
+.screen-card-topbar {
+  background: #1a1a1a;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 10px 18px;
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 14px;
 }
 
-.dot {
-  width: 11px;
-  height: 11px;
+.sc-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.sc-dot {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.dot-close { background: #ff5f56; }
-.dot-min { background: #ffbd2e; }
-.dot-max { background: #27c93f; }
+.sc-dot-close { background: #ff5f56; }
+.sc-dot-min   { background: #ffbd2e; }
+.sc-dot-max   { background: #27c93f; }
 
-.browser-tab {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #fff;
-  border: 1.5px solid var(--ink);
-  border-bottom: none;
-  padding: 5px 14px;
-  font: 600 11px var(--app-font-mono);
-  border-radius: 6px 6px 0 0;
-}
-
-.browser-address-bar {
-  background: #fff;
-  border: 1.5px solid var(--ink);
+.sc-url-pill {
+  flex: 1;
+  max-width: 440px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 6px;
   padding: 5px 12px;
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.sc-lock {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.sc-url-text {
   font: 500 11px var(--app-font-mono);
-  max-width: 480px;
-  border-radius: 4px;
+  color: rgba(255,255,255,0.55);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.ssl-lock-icon { color: #10b981; }
-.url-protocol { color: #888; }
-.url-domain { color: #111; font-weight: 600; }
-.refresh-icon { margin-left: auto; color: #888; }
-
-.browser-right-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #555;
+.sc-spacer {
+  flex-shrink: 0;
+  width: 60px;
 }
 
-.browser-viewport-canvas {
+.screen-card-viewport {
   min-height: 520px;
-  background: #fdfdfc;
+  background: #fff;
   overflow: hidden;
 }
 
@@ -3102,6 +3129,27 @@
   border-radius: 4px;
 }
 
+/* SpeakNews Screenshot Canvas */
+.speaknews-screenshot-canvas {
+  padding: 0;
+  background: #f4f4f0;
+  min-height: 0;
+}
+
+.speaknews-screenshot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.screenshot-placeholder {
+  padding: 80px 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
 /* Studio Canvas */
 .studio-canvas {
   padding: 40px;
@@ -3221,6 +3269,7 @@
   line-height: 1.7;
   color: #333;
   margin: 0;
+  white-space: pre-line;
 }
 
 .role-statement {
@@ -3228,6 +3277,7 @@
   border: 1.5px solid var(--ink);
   padding: 16px 20px;
   box-shadow: 4px 4px 0 var(--ink);
+  white-space: pre-line;
 }
 
 .contributions-list {
@@ -3257,13 +3307,32 @@
 .contributions-list.decisions li {
   background: #fff;
   border: 1px solid #1113;
-  padding: 12px 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .dec-num {
   font-weight: 700;
   color: var(--blue);
   flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.dec-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.dec-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -3474,14 +3543,11 @@
   .stage-phone-center {
     min-height: 650px;
   }
-  .desktop-browser-frame {
-    box-shadow: 6px 6px 0 var(--ink);
+  .screen-card-frame {
+    border-radius: 12px;
   }
-  .browser-chrome {
-    grid-template-columns: auto 1fr;
-  }
-  .browser-tab, .browser-right-actions {
-    display: none;
+  .sc-url-pill {
+    max-width: 240px;
   }
   .project-cta-banner {
     flex-direction: column;
@@ -4085,9 +4151,97 @@
 .btn-approve {
   background: #0f172a;
   color: #fff;
-  border: none;
   font: 700 8px var(--app-font-mono);
   padding: 6px 10px;
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* RentFlow Specific Styles */
+.rentflow-room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 16px;
+}
+
+.rentflow-room-card {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.room-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.room-card-num {
+  font-weight: 800;
+  font-size: 13px;
+  color: #0f172a;
+}
+
+.room-card-bldg {
+  font-size: 9px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.room-type-tag {
+  font-size: 9px;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 3px 6px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.room-tenant-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+.room-pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 4px;
+}
+
+.price-usd {
+  font-size: 16px;
+  font-weight: 800;
+  color: #059669;
+}
+
+.price-usd span {
+  font-size: 9px;
+  color: #64748b;
+  margin-left: 2px;
+}
+
+.price-khr {
+  font-size: 11px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.rate-pill {
+  font-size: 9px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #0f172a;
+}
+

@@ -51,7 +51,12 @@ export default function Nav() {
             ))}
           </div>
 
-          <a className="nav-cta" href={navCta.href}>
+          <a
+            className="nav-cta"
+            href={navCta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {navCta.label} <ArrowRight size={14} />
           </a>
 

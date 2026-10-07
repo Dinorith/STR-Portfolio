@@ -12,7 +12,6 @@ export default function Footer() {
           UI/UX DESIGNER<br />
           PRODUCT DESIGNER
         </span>
-        <span className="mono">{siteConfig.region}</span>
         <span className="mono">
           © 2026 {siteConfig.name}<br />
           BUILT WITH INTENTION.

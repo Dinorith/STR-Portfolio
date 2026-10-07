@@ -28,19 +28,16 @@ export default function About() {
           </div>
         </div>
 
-        <div
-          className="portrait-placeholder"
-          role="img"
-          aria-label="Abstract typographic portrait placeholder, portrait coming soon"
-        >
-          <span className="portrait-text">
-            PORTRAIT<br />
-            COMING<br />
-            SOON
-          </span>
-          <span className="mono" style={{ position: 'absolute', bottom: 12, left: 12 }}>
-            NO IMAGE / BY DESIGN
-          </span>
+        <div className="portrait-container">
+          <img
+            src="/portrait.jpg"
+            alt="Sothearith portrait"
+            className="portrait-image"
+          />
+          <div className="portrait-meta mono">
+            <span>[ 03 / PORTRAIT ]</span>
+            <span>SOTHEARITH</span>
+          </div>
         </div>
       </div>
     </section>

@@ -1,104 +1,131 @@
 import React from 'react';
 import type { ProjectData as Project } from '@/data/projects-data';
 
-export function MicroPhoneMockup() {
-  return (
-    <div className="phone" aria-hidden="true">
-      <div className="phone-top">
-        <span>9:41</span>
-        <span>•••</span>
-      </div>
-      <div className="app-mark">
-        niva<span style={{ color: '#0057ff' }}>.</span>
-      </div>
-      <div className="mono" style={{ marginTop: 5 }}>
-        YOUR MONEY, IN VIEW
-      </div>
-      <div className="phone-hero">
-        A little more<br />
-        room to grow.
-      </div>
-      <div className="phone-row">
-        <span>Everyday account</span>
-        <b>$2,480</b>
-      </div>
-      <div className="phone-row">
-        <span>Weekly spend</span>
-        <b>$146</b>
-      </div>
-      <div className="phone-button">SEE YOUR ACTIVITY →</div>
-    </div>
-  );
-}
+/* ── Project Real Image Display Config ────────────────────────────────── */
+const projectVisualConfig: Record<
+  string,
+  {
+    type: 'phone' | 'browser' | 'dual-phone';
+    primaryImage: string;
+    secondaryImage?: string;
+    alt: string;
+    url?: string;
+    badge?: string;
+  }
+> = {
+  'sala-app': {
+    type: 'browser',
+    primaryImage: '/sala-web-dashboard.png',
+    alt: 'SALA SMS Web System Dashboard',
+    url: 'sala.io/dashboard',
+    badge: 'WEB SYSTEM + MOBILE APP',
+  },
+  'hr-management-app': {
+    type: 'dual-phone',
+    primaryImage: '/hr-home.png',
+    secondaryImage: '/hr-checkin.png',
+    alt: 'HR Management App Screens',
+    badge: 'MOBILE APP',
+  },
+  'speaknews': {
+    type: 'browser',
+    primaryImage: '/speaknews-homepage.png',
+    alt: 'SpeakNews Website Redesign',
+    url: 'speak-news.com.kh',
+    badge: 'EDITORIAL REDESIGN',
+  },
+  'rentflow': {
+    type: 'browser',
+    primaryImage: '/rentflow-owner.png',
+    alt: 'RentFlow Property Owner Dashboard',
+    url: 'rentflow.app/owner',
+    badge: 'SYSTEM DASHBOARD',
+  },
+};
 
 export default function ProjectVisual({ project }: { project: Project }) {
-  if (project.theme === 'featured') {
+  const config = projectVisualConfig[project.slug];
+
+  // If specific config doesn't exist, fall back to project thumbnail or default
+  if (!config) {
+    const fallbackImage = project.thumbnail || '/sala-web-dashboard.png';
     return (
       <div className="project-visual">
-        <div className="back-phone" />
-        <MicroPhoneMockup />
-      </div>
-    );
-  }
-
-  if (project.theme === 'student') {
-    return (
-      <div className="project-visual phone-set">
-        <MicroPhoneMockup />
-        <MicroPhoneMockup />
-        <MicroPhoneMockup />
-      </div>
-    );
-  }
-
-  if (project.theme === 'system') {
-    return (
-      <div className="project-visual">
-        <div className="system-board">
-          <div className="board-cell">
-            BUTTONS
-            <div className="btn-dark" style={{ padding: 8, fontSize: 8 }}>
-              CONTINUE →
+        <div className="front-screen-card">
+          <div className="fsc-topbar">
+            <div className="fsc-dots">
+              <span className="fsc-dot" />
+              <span className="fsc-dot" />
+              <span className="fsc-dot" />
             </div>
+            <span className="fsc-title">{project.name}</span>
           </div>
-          <div className="board-cell">
-            COLOUR
-            <div className="swatches">
-              <i />
-              <i />
-              <i />
-              <i />
-            </div>
-          </div>
-          <div className="board-cell">
-            TYPEFACE
-            <br />
-            <b style={{ fontSize: 20, letterSpacing: '-.08em' }}>Aa Bb</b>
-          </div>
-          <div className="board-cell">
-            INPUT
-            <br />
-            <span style={{ borderBottom: '1px solid', padding: 5 }}>Search anything…</span>
+          <div className="fsc-viewport">
+            <img src={fallbackImage} alt={project.name} className="fsc-img" loading="lazy" />
           </div>
         </div>
       </div>
     );
   }
 
+  // Dual phone display for mobile apps (e.g. HR App)
+  if (config.type === 'dual-phone') {
+    return (
+      <div className="project-visual project-visual-phone-stage">
+        {config.secondaryImage && (
+          <div className="real-phone-frame phone-back" aria-hidden="true">
+            <div className="phone-notch-pill" />
+            <div className="phone-screen-area">
+              <img
+                src={config.secondaryImage}
+                alt={`${config.alt} secondary`}
+                className="real-screen-img"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        )}
+
+        <div className="real-phone-frame phone-front">
+          <div className="phone-notch-pill" />
+          <div className="phone-screen-area">
+            <img
+              src={config.primaryImage}
+              alt={config.alt}
+              className="real-screen-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Browser / desktop screen card display for web applications
   return (
-    <div className="project-visual">
-      <div className="mock-site">
-        <div className="mock-header">
-          <b>STUDIO / 04</b>
-          <span>MENU +</span>
+    <div className="project-visual project-visual-screen-stage">
+      <div className="front-screen-card">
+        <div className="fsc-topbar">
+          <div className="fsc-dots">
+            <span className="fsc-dot dot-red" />
+            <span className="fsc-dot dot-yellow" />
+            <span className="fsc-dot dot-green" />
+          </div>
+          {config.url && (
+            <div className="fsc-url-pill">
+              <span className="fsc-url-text">https://{config.url}</span>
+            </div>
+          )}
+          {config.badge && <span className="fsc-badge mono">{config.badge}</span>}
         </div>
-        <h3>
-          MAKE<br />
-          SPACE<br />
-          FOR IDEAS.
-        </h3>
-        <div className="mono">AN OPEN CANVAS FOR WHAT'S NEXT.</div>
-        <div className="mock-block" />
+        <div className="fsc-viewport">
+          <img
+            src={config.primaryImage}
+            alt={config.alt}
+            className="fsc-img"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   );
