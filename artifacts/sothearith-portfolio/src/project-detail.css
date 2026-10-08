@@ -2572,9 +2572,11 @@
 }
 
 .screen-card-viewport {
-  min-height: 520px;
+  min-height: 0;
   background: #fff;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ==========================================================================
@@ -3546,8 +3548,19 @@
   .screen-card-frame {
     border-radius: 12px;
   }
+  .screen-card-topbar {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  .sc-spacer {
+    display: none;
+  }
   .sc-url-pill {
-    max-width: 240px;
+    max-width: 100%;
+    padding: 4px 8px;
+  }
+  .screen-card-viewport {
+    min-height: 0;
   }
   .project-cta-banner {
     flex-direction: column;

@@ -14,9 +14,7 @@ export default function About() {
             THINGS SIMPLE.
           </h2>
           <p className="about-copy">
-            I'm Sothearith, a UI/UX designer focused on creating digital products that are clear,
-            useful, and intentional. I work from Cambodia, partnering with people who care about making
-            things better.
+            I’m Sothearith, a UI/UX designer from Cambodia. I work across web and mobile products, with a focus on turning complex requirements and workflows into clear, practical experiences. I care about the details that make a product easier to understand, navigate, and use.
           </p>
           <div className="bio-facts">
             {bioFacts.map((fact) => (

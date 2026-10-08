@@ -57,7 +57,7 @@ export const faqs: FaqItem[] = [
   {
     question: 'WHAT TOOLS DO YOU USE?',
     answer:
-      'Figma is at the centre of my process, with FigJam, Framer, Webflow, Notion, and Adobe tools supporting the work. The tool follows the problem.',
+      'Figma is at the centre of my process, with FigJam, Framer, Notion, and Adobe tools supporting the work. The tool follows the problem.',
   },
   {
     question: 'HOW LONG DOES A PROJECT TAKE?',
@@ -102,8 +102,8 @@ export const philosophyPrinciples: PhilosophyPrinciple[] = [
 export const toolsList: string[] = [
   'FIGMA',
   'FRAMER',
-  'WEBFLOW',
   'FIGJAM',
+  'JIRA',
   'NOTION',
   'PHOTOSHOP',
   'ILLUSTRATOR',
@@ -122,7 +122,7 @@ export const bioFacts: BioFact[] = [
   { label: 'NAME', value: 'SOTHEARITH' },
   { label: 'ROLE', value: 'UI/UX DESIGNER' },
   { label: 'LOCATION', value: 'CAMBODIA' },
-  { label: 'STATUS', value: 'AVAILABLE' },
+  { label: 'FOCUS', value: 'WEB · MOBILE · DIGITAL SYSTEMS' },
 ];
 
 export const aboutData = {

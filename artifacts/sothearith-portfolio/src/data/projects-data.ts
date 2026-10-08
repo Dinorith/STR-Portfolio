@@ -89,7 +89,8 @@ export const projectsList: ProjectData[] = [
     timeline: 'Product Design',
 
     externalLinks: {
-      googlePlay: 'https://play.google.com/store/apps/details?id=co.sala.salademo&hl=en'
+      googlePlay: 'https://play.google.com/store/apps/details?id=co.sala.salademo&hl=en',
+      liveWebsite: 'https://www.sala.tech/'
     },
 
     mobileScreens: [
@@ -433,10 +434,10 @@ export const projectsList: ProjectData[] = [
   // =========================================================
   {
     slug: 'speaknews',
-    name: 'SPEAKNEWS',
+    name: 'SPEAK NEWS',
     category: 'WEB UX AUDIT & REDESIGN',
     label: 'SPEAKNEWS',
-    year: '2026',
+    year: '2025',
 
     desc: 'A comprehensive UX audit and editorial web redesign transforming an existing news website into an intuitive, high-clarity reading experience with streamlined content discovery.',
 
@@ -455,7 +456,7 @@ export const projectsList: ProjectData[] = [
     role: 'Lead UX/UI Designer',
     tools: ['Figma'],
     clientOrContext: 'Independent UX Case Study',
-    timeline: 'Completed (2026)',
+    timeline: 'Completed (2025)',
 
     externalLinks: {
       liveWebsite: 'https://speak-news.com.kh/'
