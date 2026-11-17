@@ -59,13 +59,13 @@ export interface ProjectData {
 
 export const projectsList: ProjectData[] = [
   // =========================================================
-  // 01 — SALA APP
+  // 01 — SALA TECH
   // =========================================================
   {
     slug: 'sala-app',
-    name: 'SALA APP',
+    name: 'SALA TECH',
     category: 'SCHOOL MANAGEMENT — MOBILE & WEB SYSTEM',
-    label: 'SALA',
+    label: 'SALA TECH',
     year: '2026',
 
     desc: 'A full school management ecosystem I designed across two platforms — a student-facing mobile app and a web-based admin system for managing students, grades, attendance, and school operations.',
@@ -78,6 +78,7 @@ export const projectsList: ProjectData[] = [
     tags: [
       'MOBILE APP',
       'WEB SYSTEM',
+      'DESIGN SYSTEM',
       'STUDENT EXPERIENCE',
       'EDUCATION',
       'UI DESIGN'
@@ -101,8 +102,9 @@ export const projectsList: ProjectData[] = [
         label: 'HOME',
         title: 'Student Home Dashboard',
         description:
-          'A central starting point that gives students quick access to their most important academic information and everyday actions.',
-        accentColor: '#10b981'
+          'A central starting point showing attendance rate, latest grades, class schedules, and upcoming assignments at a glance.',
+        accentColor: '#3b82f6',
+        image: '/sala-home.png'
       },
 
       {
@@ -112,8 +114,9 @@ export const projectsList: ProjectData[] = [
         label: 'TIMETABLE',
         title: 'Daily & Weekly Timetable',
         description:
-          'A clear schedule view that helps students check their classes, subjects, times, and upcoming lessons.',
-        accentColor: '#3b82f6'
+          'A clear schedule view with Day, Week, and Event tabs — showing class times, subjects, teachers, room locations, and attendance status.',
+        accentColor: '#3b82f6',
+        image: '/sala-timetable.png'
       },
 
       {
@@ -123,30 +126,33 @@ export const projectsList: ProjectData[] = [
         label: 'GRADES',
         title: 'Grades & Academic Results',
         description:
-          'A structured view for students to review their academic results and understand their performance across subjects.',
-        accentColor: '#8b5cf6'
+          'A performance dashboard showing monthly scores, performance insights, and subject-by-subject grades with trend indicators.',
+        accentColor: '#8b5cf6',
+        image: '/sala-grades.png'
       },
 
       {
         id: 'homework',
         number: '04',
-        name: 'Homework',
-        label: 'HOMEWORK',
-        title: 'Homework & Assignments',
+        name: 'Assignments',
+        label: 'ASSIGNMENTS',
+        title: 'Assignments & Homework',
         description:
-          'A dedicated space for students to check assigned homework, upcoming work, and assignment information.',
-        accentColor: '#f59e0b'
+          'A dedicated space for students to view upcoming, incomplete, and completed assignments organized by date with group and homework tags.',
+        accentColor: '#f59e0b',
+        image: '/sala-assignment.png'
       },
 
       {
-        id: 'profile',
+        id: 'assignment-detail',
         number: '05',
-        name: 'Profile',
-        label: 'PROFILE',
-        title: 'Student Profile',
+        name: 'Assignment Detail',
+        label: 'DETAIL',
+        title: 'Assignment Detail & Resources',
         description:
-          'A personal student area containing profile information and important account details.',
-        accentColor: '#06b6d4'
+          'Detailed assignment view showing due dates, submission instructions, attachments like PDFs and review videos, and external resource links.',
+        accentColor: '#6366f1',
+        image: '/sala-assignment-detail.png'
       },
 
       {
@@ -154,82 +160,84 @@ export const projectsList: ProjectData[] = [
         number: '06',
         name: 'Attendance',
         label: 'ATTENDANCE',
-        title: 'Attendance Overview',
+        title: 'Attendance & Requests',
         description:
-          'A simple way for students to review their attendance records and stay aware of their attendance status.',
-        accentColor: '#10b981'
-      },
-
-      {
-        id: 'behavior',
-        number: '07',
-        name: 'Behavior',
-        label: 'BEHAVIOR',
-        title: 'Student Behavior',
-        description:
-          'A dedicated area for viewing student behavior records within the school management experience.',
-        accentColor: '#6366f1'
+          'A view for students to track attendance records and manage leave requests, permission requests, and early dismissals with approval status.',
+        accentColor: '#10b981',
+        image: '/sala-attendance.png'
       },
 
       {
         id: 'tuition',
-        number: '08',
+        number: '07',
         name: 'Tuition',
         label: 'TUITION',
         title: 'Tuition & Fee Information',
         description:
-          'A student-facing view for accessing tuition and fee-related information in one place.',
-        accentColor: '#ec4899'
+          'A student-facing view for accessing current and historical tuition invoices with payment status tracking — overdue, pending, and paid.',
+        accentColor: '#ec4899',
+        image: '/sala-tuition.png'
       },
 
       {
-        id: 'resources',
-        number: '09',
-        name: 'Resources',
-        label: 'RESOURCES',
-        title: 'School Resources',
+        id: 'profile',
+        number: '08',
+        name: 'More',
+        label: 'MORE',
+        title: 'Profile & App Settings',
         description:
-          'A space for students to access school-provided resources and important academic documents.',
-        accentColor: '#f97316'
+          'Student profile area with academic info access, attendance & requests, tuition & fees, app settings for notifications and language, and support options.',
+        accentColor: '#06b6d4',
+        image: '/sala-profile.png'
       },
 
       {
         id: 'notifications',
-        number: '10',
+        number: '09',
         name: 'Notifications',
         label: 'NOTIFICATIONS',
-        title: 'School Notifications',
+        title: 'Notification Settings',
         description:
-          'A centralized notification area for important school updates and student-related announcements.',
-        accentColor: '#14b8a6'
+          'Push notification preferences and messaging app integrations including Telegram for instant school notification delivery.',
+        accentColor: '#14b8a6',
+        image: '/sala-notifications.png'
       }
     ],
 
     webShowcase: [
       {
         id: 'web-dashboard',
-        title: 'SALA SMS — Web-Based School Management System',
+        title: 'SALA Tech SMS — Web-Based School Management System',
         caption: 'WEB SYSTEM',
         description:
-          'The web system is the institutional backbone of SALA — built for administrators and teachers. It centralizes student enrollment, attendance tracking, grade recording, homework assignment, timetable scheduling, behavior monitoring, fee management, and school-wide announcements into one structured platform. Admins get a real-time dashboard overview of school metrics, at-risk student flags, enrollment trends, and operational data — giving institutions full visibility and control from a single interface.',
+          'The web system is the institutional backbone of SALA Tech — built for administrators and teachers. It centralizes student enrollment, attendance tracking, grade recording, homework assignment, timetable scheduling, behavior monitoring, fee management, and school-wide announcements into one structured platform. Admins get a real-time dashboard overview of school metrics, at-risk student flags, enrollment trends, and operational data — giving institutions full visibility and control from a single interface.',
         badge: '02 / WEB SYSTEM'
+      },
+      {
+        id: 'design-system',
+        title: 'SALA Tech — Mobile Design System',
+        caption: 'DESIGN SYSTEM',
+        description:
+          'High-quality Figma components with variables for faster project setup and maintenance. The design system covers Typography, Buttons, Inputs, Variables, and Color System — providing a comprehensive color palette with brand colors and primitive colors across Blue, Purple, Pink, and Green spectrums, all using the Nunito font family.',
+        badge: '03 / DESIGN SYSTEM'
       }
     ],
 
     overview: {
       headline: 'One ecosystem. Two platforms. The full school experience.',
       whatItIs:
-        'SALA is a school management ecosystem I designed across two platforms. The mobile app gives students direct access to their timetable, grades, attendance, and school services. The web system is the admin and teacher-facing side — managing student records, academic data, and day-to-day school operations.',
+        'SALA Tech is a school management ecosystem I designed across two platforms. The mobile app gives students direct access to their timetable, grades, attendance, and school services. The web system is the admin and teacher-facing side — managing student records, academic data, and day-to-day school operations.',
 
       problemOrPurpose:
-        'Schools often rely on disconnected tools — spreadsheets for grades, paper registers for attendance, and phone calls for announcements. SALA brings both the student experience and the management backend into one cohesive, intentional product.',
+        'Schools often rely on disconnected tools — spreadsheets for grades, paper registers for attendance, and phone calls for announcements. SALA Tech brings both the student experience and the management backend into one cohesive, intentional product.',
 
       myRole:
         'UX/UI Designer responsible for the full product — designing both the student mobile app and the web-based admin system, including information architecture, screen layouts, interaction patterns, and visual system.',
 
       contributionsOrImprovements: [
-        'Designed the complete student-facing mobile experience across 10 core screens.',
+        'Designed the complete student-facing mobile experience across 9 core screens.',
         'Designed the web-based admin system for student, grade, and attendance management.',
+        'Built a comprehensive Mobile Design System with typography, buttons, inputs, variables, and color system.',
         'Built a consistent visual system shared across both mobile and web surfaces.',
         'Structured information flows so both students and admins get what they need quickly.'
       ],

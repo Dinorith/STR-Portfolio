@@ -21,7 +21,7 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: 'SOTHEARITH',
   brand: 'SR',
-  title: 'Sothearith — UI/UX & Product Designer',
+  title: 'Sothearith',
   description:
     'Sothearith is a UI/UX and product designer based in Cambodia, creating thoughtful digital experiences.',
   email: 'sovannsothearith@gmail.com',

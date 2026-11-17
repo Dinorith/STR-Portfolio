@@ -15,7 +15,10 @@ interface WebBrowserMockupProps {
 const getUrl = (projectSlug: string, sectionId: string) => {
   if (projectSlug === 'speaknews')
     return sectionId === 'article' ? 'speak-news.com.kh/articles' : 'speak-news.com.kh';
-  if (projectSlug === 'sala-app') return 'sala.io/dashboard';
+  if (projectSlug === 'sala-app') {
+    if (sectionId === 'design-system') return 'sala.tech/design-system';
+    return 'sala.tech/dashboard';
+  }
   if (sectionId === 'landing-page') return 'rentflow.app';
   if (sectionId === 'superadmin-console') return 'rentflow.app/admin';
   return 'rentflow.app/owner';

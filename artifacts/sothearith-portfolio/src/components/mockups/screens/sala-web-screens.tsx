@@ -4,6 +4,7 @@ const salaWebScreenshotMap: Record<string, string> = {
   'web-dashboard': '/sala-web-dashboard.png',
   'web-students':  '/sala-web-students.png',
   'web-grades':    '/sala-web-grades.png',
+  'design-system': '/sala-design-system.png',
 };
 
 export function SalaWebCanvas({ sectionId }: { sectionId: string }) {
@@ -13,7 +14,7 @@ export function SalaWebCanvas({ sectionId }: { sectionId: string }) {
     <div className="web-canvas speaknews-screenshot-canvas">
       <img
         src={src}
-        alt={`SALA App Web System — ${sectionId}`}
+        alt={`SALA Tech Web System — ${sectionId}`}
         className="speaknews-screenshot-img"
         loading="lazy"
       />
